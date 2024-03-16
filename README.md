@@ -37,6 +37,6 @@ but you can also use the `auto-compile.sh` convenience script to automatically r
 ```
 
 ## Continuous Delivery
-In order for the GitHub Actions workflows to work properly, you must set up [Github Actions permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) for this repo to allow writing packages and releases
+In order for the GitHub Actions workflows to work properly, you must set up [Github Actions permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) for this repo to allow Actions to create packages and releases.
 
 It's kind of silly, but every time you push to this GitHub repo, a GitHub Actions workflow is triggered that creates a new release containing your resume in PDF format. The release name is set to whatever the branch you pushed was called, so pushing to a `fullstack` branch will create a `fullstack` resume release, pushing to a `burger-flipper` branch will create a `burger-flipper` resume release, etc..
