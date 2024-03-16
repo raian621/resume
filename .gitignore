@@ -300,5 +300,5 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-# pdf versions will be created via GitHub Actions
+# pdf resumes will be created via GitHub Actions
 *.pdf

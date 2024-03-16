@@ -11,11 +11,12 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/raian621/resume-builder
+
     steps:
-      - uses: actions/checkout@v3
-    
-      - name: install dependencies
-        run: apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+      - uses: actions/checkout@v4
 
       - name: compile resume using pdflatex
         run: pdflatex resume.tex

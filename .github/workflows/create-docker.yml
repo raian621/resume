@@ -1,0 +1,30 @@
+name: Build and publish docker container used for compiling the resume
+
+on:
+  push:
+    paths: [ "Dockerfile" ]
+
+permissions:
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+    
+    - name: log in to the GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: build and push image to container registry
+      run: |
+        docker build . --tag \
+          ghcr.io/${{ github.repository_owner }}/resume-builder
+        docker push \
+          ghcr.io/${{ github.repository_owner }}/resume-builder:latest
