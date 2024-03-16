@@ -2,8 +2,7 @@ name: Build and publish docker container used for compiling the resume
 
 on:
   push:
-    paths: [ "Dockerfile", ".github/workflows/create-docker.yml" ]
-
+    paths: [ "Dockerfile" ]
     
 jobs:
   build:
