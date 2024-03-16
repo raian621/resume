@@ -2,14 +2,16 @@ name: Build and publish docker container used for compiling the resume
 
 on:
   push:
-    paths: [ "Dockerfile" ]
+    paths: [ "Dockerfile", ".github/workflows/create-docker.yml" ]
 
-permissions:
-  packages: write
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      packages: write
     
     steps:
     - name: checkout repo

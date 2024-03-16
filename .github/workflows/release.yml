@@ -2,11 +2,6 @@ name: Create resume release
 
 on:
   push:
-    tags:
-      - '*'
-
-permissions:
-  contents: write
 
 jobs:
   release:
@@ -15,8 +10,16 @@ jobs:
     container:
       image: ghcr.io/raian621/resume-builder
 
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
 
       - name: compile resume using pdflatex
         run: pdflatex resume.tex
@@ -25,4 +28,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: resume.pdf
-          tag_name: "${{ github.ref }}"
+          # use branch name (e.g. fullstack, devops, etc.) 
+          tag_name: "${{ steps.extract_branch.outputs.branch }}"
