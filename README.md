@@ -19,3 +19,22 @@ sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-
 ```
 
 should get you up and running on your local machine.
+
+## Development
+
+I used Visual Studio Code with the [`vscode-pdf`](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) extension installed so I could view the generated PDF while working on the LaTeX resume. 
+
+To compile the PDF from the LaTeX resume, run
+
+```sh
+pdflatex resume.tex
+```
+
+but you can also use the `auto-compile.sh` convenience script to automatically recompile the PDF every time you make a change to `resume.tex`
+
+```sh
+./auto-compile.sh
+```
+
+## Continuous Delivery
+It's kind of silly, but every time you push to this GitHub repo, a GitHub Actions workflow is triggered that creates a new release containing your resume in PDF format. The release name is set to whatever the branch you pushed was called, so pushing to a `fullstack` branch will create a `fullstack` resume release, pushing to a `burger-flipper` branch will create a `burger-flipper` resume release, etc..
