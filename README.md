@@ -1,5 +1,5 @@
 # resume
-LaTeX template for my personal resume
+Automated releases for my personal resume(s).
 
 I've only tinkered with this on Ubuntu, so that's the only platform this project is currently intended for.
 
