@@ -2,6 +2,7 @@ name: Create resume release
 
 on:
   push:
+    paths: [ "resume.tex" ]
 
 jobs:
   release:
