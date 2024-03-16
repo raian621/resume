@@ -1,6 +1,8 @@
 # resume
 LaTeX template for my personal resume
 
+I've only tinkered with this on Ubuntu, so that's the only platform this project is currently intended for.
+
 Based off of [sb2nov/resume](https://github.com/sb2nov/resume/)
 
 Forked from [Jake Gutierrez's Resume](https://github.com/jakegut/resume) (thanks Jake)
