@@ -1,0 +1,27 @@
+name: Create resume release
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: install dependencies
+        run: apt install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+      - name: compile resume using pdflatex
+        run: pdflatex resume.tex
+
+      - name: create release for resume
+        uses: softprops/action-gh-release@v1
+        with:
+          files: resume.pdf
+          tag_name: "${{ github.ref }}"
