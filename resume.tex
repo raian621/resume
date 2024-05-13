@@ -108,7 +108,7 @@
 \begin{center}
   \textbf{\Huge \scshape Ryan Bell} \\ \vspace{1pt}
   \small 469-678-6995 $|$
-  \href{mailto:x@x.com}{
+  \href{mailto:ryan.bell62101@gmail.com}{
     \underline{ryan.bell62101@gmail.com}} $|$
   \href{https://linkedin.com/in/ryan-z-bell}{
     \underline{linkedin.com/in/ryan-z-bell}} $|$
@@ -122,9 +122,9 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of North Texas}{Denton, TX}
-      {Bachelor of Science in Computer Science}{Graduating May 2024}
+      {Bachelor of Science in Computer Science}{May 2024}
       \resumeItemListStart
-        \resumeItem{Graduating summa cum laude with a 4.0 GPA}
+        \resumeItem{Graduated summa cum laude with a 4.0 GPA}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -181,8 +181,8 @@
           }
 
           \resumeItem{
-            Learned about the software development life cycle, Test Driven
-            Development, Behavior Driven Development, and other DevOps
+            Learned about the software development life cycle, test-driven 
+            development, behavior-driven development, and other DevOps
             methodologies
           }
         \resumeItemListEnd
@@ -193,72 +193,69 @@
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Transcribro} $|$ \emph{
+      FastAPI, React, Python, TypeScript, Whisper AI, Docker
+    }}{UNT Senior Capstone Project}
+    \resumeItemListStart
+      \resumeItem{
+        Developed a transcription service for the hard-of-hearing with a
+        6-person team and a university sponsor
+      }
+
+      \resumeItem{
+        Optimized audio file uploads to the Whisper API by developing a
+        compression and chunking solution, enabling longer audio files to be
+        transcribed
+      }
+
+      \resumeItem{
+        Streamlined deployment by writing Ansible playbooks to automate the process,
+        resulting in an 80\% decrease in deployment time        
+      }
+
+      \resumeItem{
+        Automated CI/CD pipeline using GitHub Actions to build and publish backend
+        as a Docker image and the frontend as static files upon codebase changes
+      }
+    \resumeItemListEnd
+
     \resumeProjectHeading
       {\textbf{rand-um} $|$ \emph{
         Gin Gonic, React, Go, Typescript, Google Cloud Platform, Docker
       }}{}
       \resumeItemListStart
         \resumeItem{
-          Created a RESTful web service using Go with Gin Gonic as the
-          backend and TypeScript with React as the frontend
+          Developed a dynamic social preview generation service for messaging apps
+          (e.g., Discord) using Go's templating library to create HTML pages
+          containing meta tags necessary for social previews
         }
 
         \resumeItem{
-          Containerized both the frontend and backend using Docker
-        }
-        
-        \resumeItem{
-          Engineered the capability to display randomized social previews on
-          popular messaging apps such as Discord by using Go's built-in file
-          templating library to dynamically generate HTML documents containing
-          the meta tags necessary for displaying social previews
+          Containerized the frontend and backend using a Docker multi-stage build
         }
 
         \resumeItem{
-          Developed a helper frontend UI tool in React used to build URLs that
-          would be used to generate randomized social previews
+          Built a React frontend UI tool to build URLs used to generate random
+          social previews from user-provided parameters
         }
       \resumeItemListEnd
+      
     \resumeProjectHeading
-      {\textbf{Transcription Service} $|$ \emph{
-        FastAPI, React, TypeScript, Python, Whisper AI, Docker
-      }}{}
+      {\textbf{Grocery Item Price Prediction Model} $|$ \emph{
+        Pandas, Matplotlib, Scikit-learn
+      }}{UNT Machine Learning}
       \resumeItemListStart
         \resumeItem{
-          Worked with a team of 6 and a university sponsor to develop a web
-          application that could transcribe audio files for the hard-of-hearing
+            Developed a machine learning model using scikit-learn's Random
+            Forest implementation to predict grocery item prices, achieving an
+            $R^2$ score of 0.8874
         }
 
         \resumeItem{
-          Engineered an audio file compression and chunking solution to handle
-          large file uploads to the Whisper API
-        }
-
-        \resumeItem{
-          Implemented continuous delivery pipeline to automatically build and
-          release project files and artifacts on GitHub whenever changes when
-          changes were made to the codebase
-        }
-
-        \resumeItem{
-          Utilized GitHub Actions to automatically build and publish a Docker
-          container image running the backend for the project onto the GitHub
-          Container Registry
-        }
-      \resumeItemListEnd
-    \resumeProjectHeading
-      {\textbf{Grocery Item Price Prediction Model} $|$ \emph{Pandas, Matplotlib, Sklearn}}{}
-      \resumeItemListStart
-        \resumeItem{
-            Created a machine learning model that could predict the price of 
-            grocery items with an $R^2$ score of 0.8874 using the sklearn Random
-            Forest machine learning model
-        }
-
-        \resumeItem{
-            Trained, tuned, and evaluated Decision Tree, Random Forest, Extreme
-            Gradient Boosting, and Linear Regression machine learning models to
-            predict grocery prices
+            Trained, tuned, and evaluated a variety of machine learning methodologies
+            including Decision Tree, Random Forest, Extreme Gradient Boosting,
+            and Linear Regression models
         }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -268,10 +265,21 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{Languages}{: Java, Python, C/C++, SQL (PostgreSQL, SQLite), JavaScript, TypeScript, HTML/CSS, Go} \\
-      \textbf{Frameworks}{: React, Node.js, Express.js, Flask, PyTest, Jest, WordPress, Material-UI, FastAPI, Flask, Gin Gonic} \\
-      \textbf{Developer Tools}{: Git, GitHub, GitLab, Docker, Google Cloud Platform, Ansible, Kubernetes} \\
-      \textbf{Libraries}{: pandas, NumPy, Matplotlib, sklearn}
+      \textbf{Languages}{:
+        Java, Python, C/C++, SQL (PostgreSQL, SQLite), JavaScript, TypeScript, HTML/CSS,
+        Go
+      } \\
+      \textbf{Frameworks}{:
+        React, Node.js, Express.js, Flask, FastAPI, PyTest, Jest, WordPress,
+        Gin Gonic
+      } \\
+      \textbf{Developer Tools}{:
+        Git, GitHub, GitHub Actions, GitLab, Docker, Google Cloud Platform,
+        Ansible, Kubernetes
+      } \\
+      \textbf{Libraries}{:
+         Material-UI, pandas, NumPy, Matplotlib, scikit-learn
+      }
     }}
  \end{itemize}
 
