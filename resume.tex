@@ -109,6 +109,7 @@
   \textbf{\Huge \scshape Ryan Bell} \\ \vspace{1pt}
   \small 469-678-6995 $|$
   \href{mailto:ryan.bell62101@gmail.com}{
+  \href{mailto:ryan.bell62101@gmail.com}{
     \underline{ryan.bell62101@gmail.com}} $|$
   \href{https://linkedin.com/in/ryan-z-bell}{
     \underline{linkedin.com/in/ryan-z-bell}} $|$
@@ -123,8 +124,11 @@
     \resumeSubheading
       {University of North Texas}{Denton, TX}
       {Bachelor of Science in Computer Science}{May 2024}
+      {Bachelor of Science in Computer Science}{May 2024}
       \resumeItemListStart
         \resumeItem{Graduated summa cum laude with a 4.0 GPA}
+        \resumeItem{Graduated summa cum laude with a 4.0 GPA}
+        \resumeItem{Specialized in AI and machine learning}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -145,20 +149,21 @@
       {Coursera}{UNT Career Academy}
       \resumeItemListStart
         \resumeItem{
-          Developed a full stack application for a mock car dealership
+          Built a full-stack car dealership application on IBM Cloud using Django
         }
 
         \resumeItem{
-          Utilized IBM Cloud functions, IBM Cloudant, and Django
+          Leveraged IBM Cloud Functions and Cloudant NoSQL database for scalable and
+          serverless backend functionality
         }
 
         \resumeItem{
-          Implemented a review sentiment analysis feature using IBM Watson's
-          Natural Language Understanding
+          Integrated IBM Watson's Natural Language Understanding for real-time sentiment
+          analysis of customer reviews
         }
 
         \resumeItem{
-          Containerized the core application using Docker
+          Containerized the application with Docker for efficient deployment and management
         }
       \resumeItemListEnd
 
@@ -167,30 +172,36 @@
         {Coursera}{UNT Career Academy}
         \resumeItemListStart
           \resumeItem{
-            Developed a RESTful microservice for managing user accounts using
-            Flask and PostgreSQL
+            Built a secure, RESTful microservice for user account
+            management using Flask and PostgreSQL
           }
 
           \resumeItem{
-            Created CI/CD pipelines using GitHub Actions and Tekton
+            Automated parts of the software development lifecycle with CI/CD
+            pipelines using GitHub Actions and Tekton
           }
 
           \resumeItem{
-            Incorporated static analysis tools and automated testing into CI/CD
-            pipelines
+            Enhanced code quality and maintainability through static analysis
+            and automated testing integrated into CI/CD pipelines
           }
 
           \resumeItem{
             Learned about the software development life cycle, test-driven 
             development, behavior-driven development, and other DevOps
             methodologies
+            Demonstrated strong understanding of DevOps principles through
+            implementation of best practices like Test Driven Development
+            and Behavior Driven Development
           }
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
+%-----------PROJECTS-----------Learned about the software development life cycle, Test Driven
+            Development, Behavior Driven Development, and other DevOps
+            methodologies
 \section{Projects}
   \resumeSubHeadingListStart
   \resumeProjectHeading
@@ -202,6 +213,14 @@
         Developed a transcription service for the hard-of-hearing with a
         6-person team and a university sponsor
       }
+    \resumeProjectHeading
+      {\textbf{Security Camera Server} $|$ \emph{
+        Go, Typescript, Linux, ffmpeg
+      }}{}
+      \resumeItemListStart
+        \resumeItem{
+          Developed a low-latency HTTP Live Streaming (HLS) server for live webcam video
+        }
 
       \resumeItem{
         Optimized audio file uploads to the Whisper API by developing a
@@ -220,6 +239,16 @@
       }
     \resumeItemListEnd
 
+        \resumeItem{
+          Integrated ffmpeg to perform real-time video transcoding, achieving a sub-3 second
+          stream delay
+        }
+
+        \resumeItem{
+          Optimized video encoding parameters to to balance quality and latency for a
+          smooth viewing experience
+        }
+      \resumeItemListEnd
     \resumeProjectHeading
       {\textbf{rand-um} $|$ \emph{
         Gin Gonic, React, Go, Typescript, Google Cloud Platform, Docker
@@ -229,15 +258,28 @@
           Developed a dynamic social preview generation service for messaging apps
           (e.g., Discord) using Go's templating library to create HTML pages
           containing meta tags necessary for social previews
+          Collaborated with a team of 6 and a university sponsor to build a 
+          web application for accessible audio transcription, aiding the
+          hard-of-hearing
         }
 
         \resumeItem{
           Containerized the frontend and backend using a Docker multi-stage build
+          Developed an audio pre-processing solution for efficient Whisper
+          API integration, enabling handling of large audio files through
+          compression and chunking
         }
 
         \resumeItem{
           Built a React frontend UI tool to build URLs used to generate random
           social previews from user-provided parameters
+          Automated the deployment process with a continuous delivery
+          pipeline on GitHub, streamlining project updates with code changes
+        }
+
+        \resumeItem{
+          Leveraged GitHub Actions for automated containerization and deployment
+          of the backend service, ensuring scalability and maintainability
         }
       \resumeItemListEnd
       
