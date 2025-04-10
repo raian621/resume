@@ -23,11 +23,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests
-        uses:  raian621/resume/.github/workflows/rust.yml@main
-    
+    uses:  raian621/resume/.github/workflows/rust.yml@main
+
   build:
     runs-on: ubuntu-latest
     needs: test
