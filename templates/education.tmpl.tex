@@ -1,0 +1,20 @@
+{% if resume.education %}
+\section{Education}
+  \resumeSubHeadingListStart
+    {% for education in resume.education -%}
+    \resumeSubheading
+      {% raw %}{{% endraw %}{{ education.school }}{% raw %}}{% endraw %}
+      {%- raw %}{{% endraw %}{{ education.location}}{% raw %}}{% endraw %}
+      {% raw %}{{% endraw %}{{ education.degree }}{% raw %}}{% endraw %}
+      {%- raw %}{{% endraw %}{{ education.start_date }} -- {{ education.end_date }}
+      {%- raw %}}{% endraw %}
+      {% if education.highlights|length > 0 -%}
+      \resumeItemListStart
+        {% for highlight in education.highlights -%}
+          \resumeItem{% raw %}{{% endraw %}{{ highlight }}{% raw %}}{% endraw %}
+        {% endfor -%}
+      \resumeItemListEnd
+      {% endif -%}
+    {% endfor -%}
+  \resumeSubHeadingListEnd
+{% endif %}

@@ -1,0 +1,17 @@
+{% if resume.certifications -%}
+\section{Certifications}
+  \resumeSubHeadingListStart
+    {% for certification in resume.certifications -%}
+    \resumeSubheading
+      {% raw %}{{% endraw %}{{ certification.title }}{% raw %}}{% endraw %}
+      {%- raw %}{{% endraw %}{{ certification.date }} -- {{ certification.expires }}{% raw %}}{% endraw %}
+      {% raw %}{{% endraw %}{{ certification.issuer }}}
+      {%- raw %}{{% endraw %}{{ certification.url }}{% raw %}}{% endraw %}
+      \resumeItemListStart
+        {% for highlight in certification.highlights -%}
+        \resumeItem{% raw %}{{% endraw %}{{ highlight }}{% raw %}}{% endraw %}
+        {% endfor -%}
+      \resumeItemListEnd
+    {%- endfor -%}
+  \resumeSubHeadingListEnd
+{% endif %}

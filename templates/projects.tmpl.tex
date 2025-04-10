@@ -1,0 +1,24 @@
+{% if resume.projects -%}
+{% raw -%}
+\section{Projects}
+  \resumeSubHeadingListStart
+  {% endraw -%}
+    {% if resume.projects -%}
+    {% for project in resume.projects -%}
+    \resumeProjectHeading
+    {\textbf{% raw %}{{% endraw %}{{ project.title }}{% raw %}}{% endraw %} 
+    {%- if project.technologies -%}
+    {% raw %} $|$ \emph{{% endraw %}{{ project.technologies | join(sep=', ') }}{% raw %}}{% endraw %}}
+    {% endif -%}
+    {% raw %}{{% endraw %}{{ project.source_link }}{% raw %}}{% endraw %}
+    {% if project.highlights -%}
+    \resumeItemListStart
+      {% for highlight in project.highlights -%}
+      \resumeItem{% raw %}{{% endraw %}{{ highlight }}{% raw %}}{% endraw %}
+      {% endfor -%}
+    \resumeItemListEnd
+    {% endif -%}
+    {% endfor -%}
+    {% endif -%}
+    \resumeSubHeadingListEnd
+{% endif -%}

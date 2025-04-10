@@ -1,0 +1,14 @@
+{% include "contact.tmpl.yml" %}
+experience:
+{% include "experience1.tmpl.yml" %}
+{% include "experience2.tmpl.yml" %}
+education:
+{% include "education1.tmpl.yml" %}
+{% include "education2.tmpl.yml" %}
+certifications:
+{% include "certification1.tmpl.yml" %}
+{% include "certification2.tmpl.yml" %}
+projects:
+{% include "project1.tmpl.yml" %}
+{% include "project2.tmpl.yml" %}
+{% include "skills.tmpl.yml" %}

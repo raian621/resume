@@ -1,0 +1,9 @@
+  - title: Project 2
+    technologies:
+      - Python
+      - Azure
+    highlights:
+      - Learned how to use Azure services.
+      - Completed a hands-on lab.
+    source_link: https://github.com/johndoe/project2
+    demo_link: https://example.com

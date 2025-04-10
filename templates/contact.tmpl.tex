@@ -1,0 +1,13 @@
+{% raw -%}
+\begin{center}
+	\textbf{\Huge \scshape {% endraw %}{{ resume.contact.name }}{% raw %}} \\ \vspace{1pt}
+	\small \href{tel:{% endraw %}{{ resume.contact.phone }}
+	{%- raw %}}{\underline{{% endraw %}{{ resume.contact.phone}}{% raw %}}} $|$
+	\href{mailto:{% endraw %}{{ resume.contact.email }}
+	{%- raw %}}{\underline{{% endraw %}{{ resume.contact.email}}{% raw %}}} $|$ 
+	\href{{% endraw %}https://{{ resume.contact.linkedin }}
+	{%- raw %}}{\underline{{% endraw %}{{ resume.contact.linkedin }}{% raw %}}} $|$
+	\href{{% endraw %}https://{{ resume.contact.github }}
+	{%- raw %}}{\underline{{% endraw %}{{ resume.contact.github}}{% raw %}}}
+\end{center}
+{%- endraw %}

@@ -1,0 +1,9 @@
+  - title: Project 1
+    technologies:
+      - Python
+      - AWS
+    highlights:
+      - Learned how to use AWS services.
+      - Completed a hands-on lab.
+    source_link: https://github.com/johndoe/project1
+    demo_link: https://example.com

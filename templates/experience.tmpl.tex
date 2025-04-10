@@ -1,0 +1,17 @@
+{% if resume.experience -%}
+\section{Experience}
+  \resumeSubHeadingListStart
+    {% for experience in resume.experience -%}
+    \resumeSubheading
+      {% raw %}{{% endraw %}{{ experience.title }}{% raw %}}{% endraw %}
+      {%- raw %}{{% endraw %}{{ experience.start_date }} -- {{ experience.end_date }}{% raw %}}{% endraw %}
+      {% raw %}{{% endraw %}{{ experience.company }}}
+      {%- raw %}{{% endraw %}{{ experience.location }}{% raw %}}{% endraw %}
+      \resumeItemListStart
+        {% for highlight in experience.highlights -%}
+        \resumeItem{% raw %}{{% endraw %}{{ highlight }}{% raw %}}{% endraw %}
+        {% endfor -%}
+      \resumeItemListEnd
+    {%- endfor -%}
+  \resumeSubHeadingListEnd
+{% endif %}

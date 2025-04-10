@@ -1,0 +1,8 @@
+  - title: Azure Developer Associate
+    issuer: Microsoft
+    date: 2023-01-01
+    expires: 2023-12-31
+    url: https://azure.microsoft.com/en-us/certification/developer-associate
+    highlights:
+      - Learned how to use Azure services.
+      - Completed a hands-on lab.

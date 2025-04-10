@@ -1,0 +1,11 @@
+{% if resume.skills -%}
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+			\textbf{Languages}{: {{resume.skills.languages | join(sep=', ') }}{% raw %}}{% endraw %} \\
+			\textbf{Frameworks}{: {{resume.skills.frameworks | join(sep=', ') }}{% raw %}}{% endraw %} \\
+			\textbf{Developer Tools}{: {{resume.skills.tools | join(sep=', ') }}{% raw %}}{% endraw %} \\
+			\textbf{Databases}{: {{ resume.skills.databases | join(sep=', ') }}{% raw %}}{% endraw %}
+    }}
+ \end{itemize}
+ {% endif -%}

@@ -1,0 +1,23 @@
+skills:
+  languages:
+    - Java
+    - Python
+    - C/C++
+    - SQL (Postgres)
+    - JavaScript
+    - HTML/CSS
+    - R
+  frameworks:
+    - React
+    - Node.js
+    - Flask
+    - JUnit
+    - WordPress
+    - Material-UI
+    - FastAPI
+  databases:
+    - PostgreSQL
+    - MongoDB
+  tools:
+    - Ansible
+    - Docker
