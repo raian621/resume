@@ -10,7 +10,7 @@ on:
     paths:
       - 'src/*'
   workflow_dispatch:
-  workflow_run:
+  workflow_call:
 
 env:
   CARGO_TERM_COLOR: always
