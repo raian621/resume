@@ -14,7 +14,6 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 
 COPY Cargo.lock .
 COPY Cargo.toml .
-COPY templates templates
 COPY src src
 RUN ls -l
 RUN cargo build --release

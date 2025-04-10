@@ -27,7 +27,7 @@ fn render_resume_with_io<R: Read, W: Write>(
 }
 
 fn render_resume_to_output<W: Write>(resume: &Resume, output: W) -> Result<(), io::Error> {
-    let tera = Tera::new("templates/**/*").unwrap();
+    let tera = Tera::new("src/templates/**/*").unwrap();
     let mut context = tera::Context::new();
     context.insert("resume", &resume);
     tera.render_to("resume.tmpl.tex", &context, output).unwrap();

@@ -1,0 +1,40 @@
+name: Build Container with Dependencies
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'src/*'
+      - 'data/*'
+      - 'scripts/*'
+      - 'Dockerfile'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'src/*'
+      - 'data/*'
+      - 'scripts/*'
+      - 'Dockerfile'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: actions/checkout@v4
+    - name: Build Docker container image
+      run: docker build -t . ghcr.io/${{ github.repository_owner }}/resume-renderer:latest
+
+    - name: Push Docker container image
+      run: docker push ghcr.io/${{ github.repository_owner }}/resume-renderer:latest
