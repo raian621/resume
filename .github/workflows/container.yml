@@ -23,7 +23,7 @@ on:
 
 jobs:
   test:
-    uses:  raian621/resume/.github/workflows/rust.yml@main
+    uses: "${{ github.repository }}/.github/workflows/rust.yml@main"
 
   build:
     runs-on: ubuntu-latest
