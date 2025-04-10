@@ -25,9 +25,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Run tests
-        uses: ./rust.yml
+        uses:  raian621/resume/.github/workflows/rust.yml@main
     
   build:
     runs-on: ubuntu-latest
