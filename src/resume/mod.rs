@@ -16,7 +16,7 @@ pub mod resume {
         pub education: Option<Vec<Education>>,
         pub certifications: Option<Vec<Certification>>,
         pub projects: Option<Vec<Project>>,
-        pub skills: Option<Skills>,
+        pub skills: Option<Vec<SkillCategory>>,
     }
 
     #[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
@@ -69,11 +69,9 @@ pub mod resume {
     }
 
     #[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
-    pub struct Skills {
-        pub languages: Option<Vec<String>>,
-        pub frameworks: Option<Vec<String>>,
-        pub databases: Option<Vec<String>>,
-        pub tools: Option<Vec<String>>,
+    pub struct SkillCategory {
+        pub name: String,
+        pub skills: Vec<String>,
     }
 
     pub fn read_resume_from_input<R: Read>(input: R) -> serde_yaml::Result<Resume> {

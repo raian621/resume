@@ -12,7 +12,9 @@ pub mod tests {
 
     use tera::Tera;
 
-    use crate::resume::resume::{Certification, Contact, Education, Experience, Project, Skills};
+    use crate::resume::resume::{
+        Certification, Contact, Education, Experience, Project, SkillCategory,
+    };
 
     use super::*;
 
@@ -126,29 +128,41 @@ pub mod tests {
         }
     }
 
-    fn get_skills() -> Skills {
-        Skills {
-            languages: Some(vec![
-                "Java".to_owned(),
-                "Python".to_owned(),
-                "C/C++".to_owned(),
-                "SQL (Postgres)".to_owned(),
-                "JavaScript".to_owned(),
-                "HTML/CSS".to_owned(),
-                "R".to_owned(),
-            ]),
-            frameworks: Some(vec![
-                "React".to_owned(),
-                "Node.js".to_owned(),
-                "Flask".to_owned(),
-                "JUnit".to_owned(),
-                "WordPress".to_owned(),
-                "Material-UI".to_owned(),
-                "FastAPI".to_owned(),
-            ]),
-            databases: Some(vec!["PostgreSQL".to_owned(), "MongoDB".to_owned()]),
-            tools: Some(vec!["Ansible".to_owned(), "Docker".to_owned()]),
-        }
+    fn get_skills() -> Vec<SkillCategory> {
+        vec![
+            SkillCategory {
+                name: "Languages".to_owned(),
+                skills: vec![
+                    "Java".to_owned(),
+                    "Python".to_owned(),
+                    "C/C++".to_owned(),
+                    "SQL (Postgres)".to_owned(),
+                    "JavaScript".to_owned(),
+                    "HTML/CSS".to_owned(),
+                    "R".to_owned(),
+                ],
+            },
+            SkillCategory {
+                name: "Frameworks".to_owned(),
+                skills: vec![
+                    "React".to_owned(),
+                    "Node.js".to_owned(),
+                    "Flask".to_owned(),
+                    "JUnit".to_owned(),
+                    "WordPress".to_owned(),
+                    "Material-UI".to_owned(),
+                    "FastAPI".to_owned(),
+                ],
+            },
+            SkillCategory {
+                name: "Databases".to_owned(),
+                skills: vec!["PostgreSQL".to_owned(), "MongoDB".to_owned()],
+            },
+            SkillCategory {
+                name: "Tools".to_owned(),
+                skills: vec!["Ansible".to_owned(), "Docker".to_owned()],
+            },
+        ]
     }
 
     fn get_project_2() -> Project {
