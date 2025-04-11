@@ -165,7 +165,7 @@ pub mod tests {
     }
 
     fn get_resume_from_template(template_name: &str) -> Resume {
-        let tera = Tera::new("test/templates/**/*").unwrap();
+        let tera = Tera::new("src/test/templates/**/*").unwrap();
         let resume_yaml = tera.render(template_name, &tera::Context::new());
         read_resume_from_input(Cursor::new(resume_yaml.unwrap())).unwrap()
     }
