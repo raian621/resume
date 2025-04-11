@@ -4,11 +4,13 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/*'
+      - 'src/**'
+      - '.github/workflows/rust.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'src/*'
+      - 'src/**'
+      - '.github/workflows/rust.yml'
   workflow_dispatch:
   workflow_call:
 

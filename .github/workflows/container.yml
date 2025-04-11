@@ -4,17 +4,19 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/*'
+      - 'src/**'
       - 'Dockerfile'
       - 'Cargo.toml'
       - 'Cargo.lock'
+      - '.github/workflows/container.yml'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'src/*'
+      - 'src/**'
       - 'Dockerfile'
       - 'Cargo.toml'
       - 'Cargo.lock'
+      - '.github/workflows/container.yml'
   workflow_dispatch:
 
 jobs:
