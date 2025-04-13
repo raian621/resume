@@ -1,16 +1,6 @@
-name: Rust CI
+name: Run Rust unit tests
 
 on:
-  push:
-    branches: [ "main" ]
-    paths:
-      - 'src/**'
-      - '.github/workflows/rust.yml'
-  pull_request:
-    branches: [ "main" ]
-    paths:
-      - 'src/**'
-      - '.github/workflows/rust.yml'
   workflow_dispatch:
   workflow_call:
 

@@ -1,23 +1,8 @@
 name: Build Container with Dependencies
 
 on:
-  push:
-    branches: [ "main" ]
-    paths:
-      - 'src/**'
-      - 'Dockerfile'
-      - 'Cargo.toml'
-      - 'Cargo.lock'
-      - '.github/workflows/container.yml'
-  pull_request:
-    branches: [ "main" ]
-    paths:
-      - 'src/**'
-      - 'Dockerfile'
-      - 'Cargo.toml'
-      - 'Cargo.lock'
-      - '.github/workflows/container.yml'
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   test:
